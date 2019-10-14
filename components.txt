@@ -1,0 +1,14 @@
+1.Home
+2.Navbar
+3.Products
+4.Manage Product
+5.Cartng 
+6.Checkout
+7.order-success
+8.about
+9.contact
+10.admin/admin-products
+11.admin/admin-orders
+12.footer
+
+@import "~bootstrap/dist/css/bootstrap.css";
