@@ -1,49 +1,141 @@
-<div class="py-1 bg-primary">
-    	<div class="container">
-    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
-	    		<div class="col-lg-12 d-block">
-		    		<div class="row d-flex">
-		    			<div class="col-md pr-4 d-flex topper align-items-center">
-					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-						    <span class="text">+ 1235 2355 98</span>
-					    </div>
-					    <div class="col-md pr-4 d-flex topper align-items-center">
-					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-						    <span class="text">youremail@email.com</span>
-					    </div>
-					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
-						    <span class="text">3-5 Business days delivery &amp; Free Returns</span>
-					    </div>
-				    </div>
-			    </div>
-		    </div>
-		  </div>
+<!--================Header Menu Area =================-->
+<header class="header_area">
+    <div class="top_menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="float-left">
+              <p>Phone: +91 9677829911</p>
+              <p>email: vardhan.vichu@gmail.com</p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="float-right">
+              <ul class="right_side">
+                <li>
+                  <a routerLink="cart.html">
+                    gift card
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="tracking.html">
+                    track order
+                  </a>
+                </li>
+                <li>
+                  <a routerLink="contact.html">
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" routerLink="index.html">Vegefoods</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a routerLink="index.html" class="nav-link">Home</a></li>
-	          <li ngDropdown class="nav-item dropdown">
-              <a  ngDropdownToggle class="nav-link dropdown-toggle" routerLink="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Username</a>
-              <div ngDropdownMenu class="dropdown-menu" aria-labelledby="dropdown04">
-              	<a  class="dropdown-item" routerLink="/orders">My Orders</a>
-              	<a class="dropdown-item" routerLink="/admin-orders">Manage Orders</a>
-                <a class="dropdown-item" routerLink="/cart">Cart</a>
-                <a class="dropdown-item" routerLink="/home">Logout</a>
+    <div class="main_menu">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <a class="navbar-brand logo_h" routerLink="/home">
+            <img src="./assets/img/logo.png" alt="" />
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse offset w-100" id="navbarSupportedContent">
+            <div class="row w-100 mr-0">
+              <div class="col-lg-7 pr-0">
+                <ul class="nav navbar-nav center_nav pull-right">
+                  <li class="nav-item active">
+                    <a class="nav-link" routerLink="/home">Home</a>
+                  </li>
+                  <li class="nav-item submenu dropdown">
+                    <a routerLink="/home" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false">Shop</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" routerLink="/products">Shop Category</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" routerLink="single-product.html">Product Details</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" routerLink="/checkout">Product Checkout</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" routerLink="/shopping-cart">Shopping Cart</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item submenu dropdown">
+                    <a routerLink="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false">Username</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" routerLink="/my-orders">My Orders</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin/admin-orders">Manage Orders</a>
+					  </li>
+					  <li class="nav-item">
+                        <a class="nav-link" routerLink="/admin/admin-products">Manage Orders</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item submenu dropdown">
+                    <a routerLink="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                      aria-expanded="false">About</a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-item">
+                        <a class="nav-link" routerLink="tracking.html">Tracking</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" routerLink="elements.html">Elements</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact">Contact</a>
+                  </li>
+                </ul>
               </div>
-            </li>
-	          <li class="nav-item"><a routerLink="/about" class="nav-link">About</a></li>
-	          <li class="nav-item"><a routerLink="/contact" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta cta-colored"><a routerLink="/checkout" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
 
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-    <!-- END nav -->
+              <div class="col-lg-5 pr-0">
+                <ul class="nav navbar-nav right_nav pull-right ">
+                  <li class="nav-item">
+                    <a routerLink="#" class="icons">
+                      <i class="ti-search" aria-hidden="true"></i>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a routerLink="#" class="icons">
+                      <i class="ti-shopping-cart"></i>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a routerLink="#" class="icons">
+                      <i class="ti-user" aria-hidden="true"></i>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a routerLink="#" class="icons">
+                      <i class="ti-heart" aria-hidden="true"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <!--================Header Menu Area =================-->

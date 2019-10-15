@@ -17,6 +17,13 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from 'src/environments/environment';
+
 
 @NgModule({
   declarations: [
@@ -31,15 +38,20 @@ import { LoginComponent } from './login/login.component';
     AdminProductsComponent,
     AdminOrdersComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    ShoppingCartComponent,
+    MyOrdersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     AngularFontAwesomeModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule,
     RouterModule.forRoot([
-      { path: '',   redirectTo: '/heroes', pathMatch: 'full' },
+      { path: '',   redirectTo: 'home', pathMatch: 'full' },
       { path: '', component: AppComponent },
       { path: 'home', component: HomeComponent },
       { path: 'navbar', component: NavbarComponent },
@@ -52,6 +64,8 @@ import { LoginComponent } from './login/login.component';
       { path: 'admin/admin-orders', component: AdminOrdersComponent },
       { path: 'footer', component: FooterComponent },
       { path: 'login', component: LoginComponent },
+      { path: 'shopping-cart', component: ShoppingCartComponent },
+      { path: 'my-orders', component: MyOrdersComponent },
     ])
   ],
   providers: [],
